@@ -1,21 +1,20 @@
 package com.akhramovichsa.pong.Screens;
 
 import com.akhramovichsa.pong.PongGame;
-import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 class FinishScreen implements Screen {
@@ -63,33 +62,33 @@ class FinishScreen implements Screen {
 
         generator.dispose();
 
-        /*Label.LabelStyle label_style = new Label.LabelStyle();
+        Label.LabelStyle label_style = new Label.LabelStyle();
         label_style.font      = font;
-        label_style.fontColor = Color.WHITE;*/
+        label_style.fontColor = Color.WHITE;
 
-        /*Label.LabelStyle label_big_style = new Label.LabelStyle();
+        Label.LabelStyle label_big_style = new Label.LabelStyle();
         label_big_style.font      = font_big;
-        label_big_style.fontColor = Color.WHITE;*/
+        label_big_style.fontColor = Color.WHITE;
 
         //-------------------------------------------------------//
         //                        PONG                           //
         //-------------------------------------------------------//
-        // Label label_pong = new Label("PONG", label_big_style);
+        Label label_pong = new Label("PONG", label_big_style);
 
         //-------------------------------------------------------//
         //                      PLAYER WINS                       //
         //-------------------------------------------------------//
-        //Label label_player_wins = new Label("PLAYER WINS", label_big_style);
+        Label label_player_wins = new Label("PLAYER WINS", label_big_style);
 
         //-------------------------------------------------------//
         //                      DEVICE WINS                      //
         //-------------------------------------------------------//
-        //Label label_device_wins = new Label("DEVICE WINS", label_big_style);
+        Label label_device_wins = new Label("DEVICE WINS", label_big_style);
 
         //-------------------------------------------------------//
         //                      PLAY AGAIN                       //
         //-------------------------------------------------------//
-        /*Label label_play_again = new Label("PLAY AGAIN", label_style);
+        Label label_play_again = new Label("PLAY AGAIN", label_style);
         label_play_again.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -97,19 +96,19 @@ class FinishScreen implements Screen {
                 game.setScreen(new GameScreen((PongGame) game, score_to_wins));
                 dispose();
             }
-        });*/
+        });
 
         //-------------------------------------------------------//
         //                        EXIT                           //
         //-------------------------------------------------------//
-        /*Label label_exit = new Label("EXIT", label_style);
+        Label label_exit = new Label("EXIT", label_style);
         label_exit.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 f_sharp_5.play();
                 Gdx.app.exit();
             }
-        });*/
+        });
 
         final Table table = new Table();
         // table.setDebug(true);

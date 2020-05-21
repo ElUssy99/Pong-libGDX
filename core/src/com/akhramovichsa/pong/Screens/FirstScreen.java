@@ -1,12 +1,10 @@
 package com.akhramovichsa.pong.Screens;
 
 import com.akhramovichsa.pong.PongGame;
-import com.badlogic.gdx.Files;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.audio.Sound;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -19,11 +17,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-import java.util.logging.FileHandler;
-
-/**
- *
- */
 public class FirstScreen implements Screen {
 
     private static final int WORLD_WIDTH  = PongGame.WORLD_WIDTH;
@@ -55,10 +48,8 @@ public class FirstScreen implements Screen {
         }
         */
 
-        // Звуки
         final Sound f_sharp_5 = Gdx.audio.newSound(Gdx.files.internal("data/pongblip_f_sharp_5.mp3"));
 
-        // Шрифты
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("data/04b_24.ttf"));
         // FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("data/04b_03b.ttf"));
         // FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("data/04b_08.ttf"));
@@ -100,7 +91,6 @@ public class FirstScreen implements Screen {
         });
         */
 
-        // Игра до 1 победы
         Label label_1_win = new Label("1 WIN", label_style);
         label_1_win.addListener(new ClickListener() {
             @Override
@@ -111,7 +101,6 @@ public class FirstScreen implements Screen {
             }
         });
 
-        // Игра до 3 побед
         Label label_3_wins = new Label("3 WINS", label_style);
         label_3_wins.addListener(new ClickListener() {
             @Override
@@ -122,7 +111,6 @@ public class FirstScreen implements Screen {
             }
         });
 
-        // Игра до 5 побед
         Label label_5_wins = new Label("5 WINS", label_style);
         label_5_wins.addListener(new ClickListener() {
             @Override
@@ -133,7 +121,6 @@ public class FirstScreen implements Screen {
             }
         });
 
-        // Игра до 10 побед
         Label label_10_wins = new Label("10 WINS", label_style);
         label_10_wins.addListener(new ClickListener() {
             @Override
@@ -183,7 +170,7 @@ public class FirstScreen implements Screen {
         });
 
         //-------------------------------------------------------//
-        //                      ТАБЛИЦА                          //
+        //                       LABEL                           //
         //-------------------------------------------------------//
         final Table table = new Table();
         // table.setDebug(true);

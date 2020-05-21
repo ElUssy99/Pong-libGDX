@@ -1,8 +1,8 @@
 package com.akhramovichsa.pong.desktop;
 
+import com.akhramovichsa.pong.PongGame;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.akhramovichsa.pong.PongGame;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {

@@ -6,6 +6,6 @@
 
 	<inherits name='PongGame' />
 	<entry-point class='com.akhramovichsa.pong.client.HtmlLauncher' />
-	
+
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 </module>
