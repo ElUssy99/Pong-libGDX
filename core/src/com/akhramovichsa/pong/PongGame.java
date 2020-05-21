@@ -1,7 +1,6 @@
 package com.akhramovichsa.pong;
 
 import com.akhramovichsa.pong.Screens.FirstScreen;
-import com.akhramovichsa.pong.Screens.GameScreen;
 import com.badlogic.gdx.Game;
 
 public class PongGame extends Game {

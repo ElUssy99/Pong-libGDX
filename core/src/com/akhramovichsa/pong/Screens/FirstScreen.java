@@ -10,12 +10,12 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 
 public class FirstScreen implements Screen {
 
@@ -79,17 +79,17 @@ public class FirstScreen implements Screen {
         //                      1 PLAYER                         //
         //-------------------------------------------------------//
         Label label_1_player = new Label("PLAY TO", label_style);
-        /*
+
         label_1_player.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 // Gdx.app.log("button", "clicked 1 player");
                 f_sharp_5.play();
-                game.setScreen(new GameScreen((PongGame) game));
+                game.setScreen(new GameScreen((PongGame) game, 0));
                 dispose();
             }
         });
-        */
+
 
         Label label_1_win = new Label("1 WIN", label_style);
         label_1_win.addListener(new ClickListener() {
