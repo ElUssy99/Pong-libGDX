@@ -78,19 +78,6 @@ public class FirstScreen implements Screen {
         //-------------------------------------------------------//
         //                      1 PLAYER                         //
         //-------------------------------------------------------//
-        Label label_1_player = new Label("PLAY TO", label_style);
-
-        label_1_player.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                // Gdx.app.log("button", "clicked 1 player");
-                f_sharp_5.play();
-                game.setScreen(new GameScreen((PongGame) game, 0));
-                dispose();
-            }
-        });
-
-
         Label label_1_win = new Label("1 WIN", label_style);
         label_1_win.addListener(new ClickListener() {
             @Override
@@ -121,40 +108,6 @@ public class FirstScreen implements Screen {
             }
         });
 
-        Label label_10_wins = new Label("10 WINS", label_style);
-        label_10_wins.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                f_sharp_5.play();
-                game.setScreen(new GameScreen((PongGame) game, 10));
-                dispose();
-            }
-        });
-
-        //-------------------------------------------------------//
-        //                      2 PLAYERS                        //
-        //-------------------------------------------------------//
-        Label label_2_players = new Label("2 PLAYERS", label_style);
-        label_2_players.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                // Gdx.app.log("button", "clicked 2 players");
-                f_sharp_5.play();
-            }
-        });
-
-        //-------------------------------------------------------//
-        //                      SETTINGS                         //
-        //-------------------------------------------------------//
-        Label label_settings = new Label("SETTINGS", label_style);
-        label_settings.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                // Gdx.app.log("button", "clicked settings");
-                f_sharp_5.play();
-            }
-        });
-
         //-------------------------------------------------------//
         //                        EXIT                           //
         //-------------------------------------------------------//
@@ -174,19 +127,14 @@ public class FirstScreen implements Screen {
         //-------------------------------------------------------//
         final Table table = new Table();
         // table.setDebug(true);
-        // table.setFillParent(true);
         table.setPosition(WORLD_WIDTH / 2f, WORLD_HEIGHT / 2f);
         table.add(label_pong).expandX().center().pad(WORLD_HEIGHT / 32);
-        table.row();
-        table.add(label_1_player).expandX().center().pad(WORLD_HEIGHT / 32);
         table.row();
         table.add(label_1_win).expandX().center().pad(WORLD_HEIGHT / 32);
         table.row();
         table.add(label_3_wins).expandX().center().pad(WORLD_HEIGHT / 32);
         table.row();
         table.add(label_5_wins).expandX().center().pad(WORLD_HEIGHT / 32);
-        // table.row();
-        // table.add(label_settings).expandX().center().pad(WORLD_HEIGHT / 32);
         table.row();
         table.add(label_exit).expandX().center();
 
@@ -195,10 +143,6 @@ public class FirstScreen implements Screen {
         Gdx.input.setInputProcessor(stage);
 
         stage.addActor(table);
-
-        // stage.addActor(label_2_players);
-        // stage.addActor(label_settings);
-        // stage.addActor(label_exit);
     }
 
     @Override
